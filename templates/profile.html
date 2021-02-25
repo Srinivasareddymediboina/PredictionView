@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+
+ 
+
+
+
+<div class="container">
+ <br>
+  <div class="card">
+    <div class="card-header bg-warning text-white card-border"><h1>Full info About the {{i.username}}</h1></div>
+    <div class="card-body">
+    	<img src='/static/images/{{ i2.photo }}' height="250px" width="250px" style="border-radius: 100px;"> 
+    	<h1>FirstName:{{ i.first_name }}</h1>
+		<h1>LastName:{{ i.last_name }}</h1>
+		<h1>Username:{{ i.username }}</h1>
+		<h1>Email:{{ i.email }}</h1>
+
+		<h1>DOB:{{ i2.dob }}</h1>
+		<h1>Gender:{{ i2.gender }}</h1>
+    </div> 
+    <div class="card-footer bg-warning">
+    	<button><a href="{% url 'ParametersView' %}">ParametersView</a></button>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}

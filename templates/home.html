@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+</head>
+<br>
+<marquee><i><h1 class="mydiv h">Indian Premier League</h1></i></marquee>
+<body>
+  <center>
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1" ></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+    <li data-target="#demo" data-slide-to="3"></li>
+    <li data-target="#demo" data-slide-to="4"></li>
+    
+  
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src='{% static "img/G1.jpg" %}' alt="Los Angeles" width="90%" height="10%">
+    </div>
+    <div class="carousel-item">
+      <img src='{% static "img/G2.jpg" %}' alt="Chicago" width="90%" height="10%">
+    </div>
+    <div class="carousel-item">
+      <img src='{% static "img/G3.jpg" %}' alt="New York" width="90%" height="10%">
+    </div>
+    <div class="carousel-item">
+      <img src='{% static "img/G4.jpg" %}' alt="New York" width="90%" height="10%">
+    </div>
+    
+    <div class="carousel-item">
+      <img src='{% static "img/G6.jpg" %}' alt="New York" width="90%" height="10%">
+    </div>
+  </div>
+
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+ 
+</center>
+
+<br>
+<br>
+<h3>Indian Premier League</h3>
+<p>
+  
+  The Indian Premier League (IPL) is a professional Twenty20 cricket league in India usually contested between March and May of every year by eight teams representing eight different cities or states in India.[3] The league was founded by the Board of Control for Cricket in India (BCCI) in 2007. The IPL has an exclusive window in ICC Future Tours Programme.[4]
+
+The IPL is the most-attended cricket league in the world and in 2014 was ranked sixth by average attendance among all sports leagues.[5] In 2010, the IPL became the first sporting event in the world to be broadcast live on YouTube.[6][7] The brand value of the IPL in 2019 was ₹475 billion (US$6.7 billion), according to Duff & Phelps.[8] According to BCCI, the 2015 IPL season contributed ₹11.5 billion (US$160 million) to the GDP of the Indian economy.
+</p>
+<br>
+<br>
+<h3>Background</h3>
+<p>
+  
+The Indian Cricket League (ICL) was founded in 2007, with funding provided by Zee Entertainment Enterprises.[13] The ICL was not recognised by the Board of Control for Cricket in India (BCCI) or the International Cricket Council (ICC) and the BCCI were not pleased with its committee members joining the ICL executive board.[14] To prevent players from joining the ICL, the BCCI increased the prize money in their own domestic tournaments and also imposed lifetime bans on players joining the ICL, which was considered a rebel league by the board.[15][16]
+</p>
+<br><br>
+<h3>Foundation</h3>
+<p>On 13 September 2007, the BCCI announced the launch of a franchise-based Twenty20 cricket competition called Indian Premier League whose first season was slated to start in April 2008, in a "high-profile ceremony" in New Delhi. BCCI vice-president Lalit Modi, said to be the mastermind behind the idea of the IPL, spelled out the details of the tournament including its format, the prize money, franchise revenue system and squad composition rules. It was also revealed that the IPL would be run by a seven-man governing council composed of former India players and BCCI officials and that the top two teams of the IPL would qualify for that year's Champions League Twenty20. Modi also clarified that they had been working on the idea for two years and that the IPL was not started as a "knee-jerk reaction" to the ICL.[17] The league's format was similar to that of the Premier League of England and the NBA in the United States.[16]
+
+In order to decide the owners for the new league, an auction was held on 24 January 2008 with the total base prices of the franchises costing around $400 million.[16] At the end of the auction, the winning bidders were announced, as well as the cities the teams would be based in: Bangalore, Chennai, Delhi, Hyderabad, Jaipur, Kolkata, Mohali, and Mumbai.[16] In the end, the franchises were all sold for a total of $723.59 million.[18] The Indian Cricket League soon folded in 2008.[19]</p>
+
+</body>
+</html>
+
+
+{% endblock %}

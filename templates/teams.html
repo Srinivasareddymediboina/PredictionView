@@ -1,0 +1,232 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+</head>
+<br>
+<marquee><i><h1 class="mydiv h">Indian Premier League Teams</h1></i></marquee>
+<br>
+<center>
+
+<table class="wikitable sortable" style="width:80%;">
+
+<tbody><tr>
+<th colspan="2" style="width:20%; color:#fff; background:#0101df;">Team
+</th>
+<th style="width:20%; color:#fff; background:#0101df;">City
+</th>
+<th style="width:20%; color:#fff; background:#0101df;">Home ground
+</th>
+<th style="width:5%; color:#fff; background:#0101df;">Debut
+</th>
+<th style="width:25%; color:#fff; background:#0101df;">Owner<sup id="cite_ref-39" class="reference"><a href="#cite_note-39">&#91;39&#93;</a></sup>
+</th></tr>
+<tr>
+<td style="background:yellow;">
+</td>
+<td><a href="/wiki/Chennai_Super_Kings" title="Chennai Super Kings">Chennai Super Kings</a>
+</td>
+<td><a href="/wiki/Chennai" title="Chennai">Chennai</a>, <a href="/wiki/Tamil_Nadu" title="Tamil Nadu">Tamil Nadu</a>
+</td>
+<td><a href="/wiki/M._A._Chidambaram_Stadium" title="M. A. Chidambaram Stadium">M. A. Chidambaram Stadium</a>
+</td>
+<td>2008
+</td>
+<td><a href="/wiki/India_Cements" title="India Cements">India Cements</a>
+</td></tr>
+<tr>
+<td style="background:#00BFFF;">
+</td>
+<td><a href="/wiki/Delhi_Capitals" title="Delhi Capitals">Delhi Capitals</a>
+</td>
+<td><a href="/wiki/Delhi" title="Delhi">Delhi</a>, <a href="/wiki/National_Capital_Region_(India)" title="National Capital Region (India)">NCR</a>
+</td>
+<td><a href="/wiki/Arun_Jaitley_Stadium" title="Arun Jaitley Stadium">Arun Jaitley Stadium</a>
+</td>
+<td>2008
+</td>
+<td>
+<ul><li><a href="/wiki/JSW_Group" title="JSW Group">JSW Group</a></li>
+<li><a href="/wiki/GMR_Group" title="GMR Group">GMR Group</a></li></ul>
+</td></tr>
+<tr>
+<td style="background:#CC2222;">
+</td>
+<td><a href="/wiki/Punjab_Kings" class="mw-redirect" title="Punjab Kings">Punjab Kings</a>
+</td>
+<td><a href="/wiki/Mohali" title="Mohali">Mohali</a>, <a href="/wiki/Punjab,_India" title="Punjab, India">Punjab</a>
+</td>
+<td><a href="/wiki/Punjab_Cricket_Association_IS_Bindra_Stadium" title="Punjab Cricket Association IS Bindra Stadium">PCA Stadium, Mohali</a>
+</td>
+<td>2008
+</td>
+<td>
+<ul><li><a href="/wiki/Mohit_Burman" title="Mohit Burman">Mohit Burman</a></li>
+<li><a href="/wiki/Ness_Wadia" title="Ness Wadia">Ness Wadia</a></li>
+<li><a href="/wiki/Preity_Zinta" title="Preity Zinta">Preity Zinta</a></li>
+<li><a href="/wiki/Karan_Paul" title="Karan Paul">Karan Paul</a></li></ul>
+</td></tr>
+<tr>
+<td style="background:indigo;">
+</td>
+<td><a href="/wiki/Kolkata_Knight_Riders" title="Kolkata Knight Riders">Kolkata Knight Riders</a>
+</td>
+<td><a href="/wiki/Kolkata" title="Kolkata">Kolkata</a>, <a href="/wiki/West_Bengal" title="West Bengal">West Bengal</a>
+</td>
+<td><a href="/wiki/Eden_Gardens" title="Eden Gardens">Eden Gardens</a>
+</td>
+<td>2008
+</td>
+<td>
+<ul><li><a href="/wiki/Red_Chillies_Entertainment" title="Red Chillies Entertainment">Red Chillies Entertainment</a></li>
+<li><a href="/wiki/Mehta_Group" title="Mehta Group">Mehta Group</a></li></ul>
+</td></tr>
+<tr>
+<td style="background:blue;">
+</td>
+<td><a href="/wiki/Mumbai_Indians" title="Mumbai Indians">Mumbai Indians</a>
+</td>
+<td><a href="/wiki/Mumbai" title="Mumbai">Mumbai</a>, <a href="/wiki/Maharashtra" title="Maharashtra">Maharashtra</a>
+</td>
+<td><a href="/wiki/Wankhede_Stadium" title="Wankhede Stadium">Wankhede Stadium</a>
+</td>
+<td>2008
+</td>
+<td><a href="/wiki/Reliance_Industries" title="Reliance Industries">Reliance Industries</a>
+</td></tr>
+<tr>
+<td style="background:magenta;">
+</td>
+<td><a href="/wiki/Rajasthan_Royals" title="Rajasthan Royals">Rajasthan Royals</a>
+</td>
+<td><a href="/wiki/Jaipur" title="Jaipur">Jaipur</a>, <a href="/wiki/Rajasthan" title="Rajasthan">Rajasthan</a>
+</td>
+<td><a href="/wiki/Sawai_Mansingh_Stadium" title="Sawai Mansingh Stadium">Sawai Mansingh Stadium</a>
+</td>
+<td>2008
+</td>
+<td><a href="/wiki/Manoj_Badale" title="Manoj Badale">Manoj Badale</a>
+</td></tr>
+<tr>
+<td style="background:red;">
+</td>
+<td><a href="/wiki/Royal_Challengers_Bangalore" title="Royal Challengers Bangalore">Royal Challengers Bangalore</a>
+</td>
+<td><a href="/wiki/Bengaluru" class="mw-redirect" title="Bengaluru">Bengaluru</a>, <a href="/wiki/Karnataka" title="Karnataka">Karnataka</a>
+</td>
+<td><a href="/wiki/M._Chinnaswamy_Stadium" title="M. Chinnaswamy Stadium">M. Chinnaswamy Stadium</a>
+</td>
+<td>2008
+</td>
+<td><a href="/wiki/United_Spirits" title="United Spirits">United Spirits</a>
+</td></tr>
+<tr>
+<td style="background:orangered;">
+</td>
+<td><a href="/wiki/Sunrisers_Hyderabad" title="Sunrisers Hyderabad">Sunrisers Hyderabad</a>
+</td>
+<td><a href="/wiki/Hyderabad" title="Hyderabad">Hyderabad</a>, <a href="/wiki/Telangana" title="Telangana">Telangana</a>
+</td>
+<td><a href="/wiki/Rajiv_Gandhi_International_Cricket_Stadium" class="mw-redirect" title="Rajiv Gandhi International Cricket Stadium">Rajiv Gandhi International Cricket Stadium</a>
+</td>
+<td>2013
+</td>
+<td><a href="/wiki/Sun_TV_Network" title="Sun TV Network">Sun TV Network</a>
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Former_teams">Former teams</span></h3>
+<table class="wikitable sortable" style="width:80%;">
+
+<tbody><tr>
+<th colspan="2" style="width:20%; color:#fff; background:#0101df;">Team
+</th>
+<th style="width:20%; color:#fff; background:#0101df;">City
+</th>
+<th style="width:20%; color:#fff; background:#0101df;">Home ground
+</th>
+<th style="width:5%; color:#fff; background:#0101df;">Debut
+</th>
+<th style="width:5%; color:#fff; background:#0101df;">Dissolved
+</th>
+<th style="width:20%; color:#fff; background:#0101df;">Owner
+</th></tr>
+<tr>
+<td style="background:#008080;">
+</td>
+<td><a href="/wiki/Deccan_Chargers" title="Deccan Chargers">Deccan Chargers</a>
+</td>
+<td><a href="/wiki/Hyderabad,_Telangana" class="mw-redirect" title="Hyderabad, Telangana">Hyderabad, Telangana</a>
+</td>
+<td><a href="/wiki/Rajiv_Gandhi_International_Stadium" class="mw-redirect" title="Rajiv Gandhi International Stadium">Rajiv Gandhi International Stadium</a>
+</td>
+<td>2008
+</td>
+<td>2012
+</td>
+<td><a href="/wiki/Gayatri_Reddy_(socialite)" title="Gayatri Reddy (socialite)">Gayatri Reddy</a>, <a href="/wiki/T_Venkattram_Reddy" class="mw-redirect" title="T Venkattram Reddy">T Venkattram Reddy</a>
+</td></tr>
+<tr>
+<td style="background:#ff8020;">
+</td>
+<td><a href="/wiki/Kochi_Tuskers_Kerala" title="Kochi Tuskers Kerala">Kochi Tuskers Kerala</a>
+</td>
+<td><a href="/wiki/Kochi" title="Kochi">Kochi</a>, <a href="/wiki/Kerala" title="Kerala">Kerala</a>
+</td>
+<td><a href="/wiki/Jawaharlal_Nehru_Stadium_(Kochi)" title="Jawaharlal Nehru Stadium (Kochi)">Jawaharlal Nehru Stadium</a>
+</td>
+<td>2011
+</td>
+<td>2011
+</td>
+<td><a href="/wiki/Rendezvous_Sports_World" title="Rendezvous Sports World">Rendezvous  Consortium</a>
+</td></tr>
+<tr>
+<td style="background:#48D1CC;">
+</td>
+<td><a href="/wiki/Pune_Warriors_India" title="Pune Warriors India">Pune Warriors India</a>
+</td>
+<td><a href="/wiki/Pune,_Maharashtra" class="mw-redirect" title="Pune, Maharashtra">Pune, Maharashtra</a>
+</td>
+<td><a href="/wiki/DY_Patil_Stadium" title="DY Patil Stadium">DY Patil Stadium</a>, <a href="/wiki/Maharashtra_Cricket_Association_Stadium" title="Maharashtra Cricket Association Stadium">Maharashtra Cricket Association Stadium</a>
+</td>
+<td>2011
+</td>
+<td>2013
+</td>
+<td><a href="/wiki/Subrata_Roy" title="Subrata Roy">Subrata Roy</a>
+</td></tr>
+<tr>
+<td style="background:darkviolet;">
+</td>
+<td><a href="/wiki/Rising_Pune_Supergiant" title="Rising Pune Supergiant">Rising Pune Supergiant</a>
+</td>
+<td><a href="/wiki/Pune" title="Pune">Pune</a>, <a href="/wiki/Maharashtra" title="Maharashtra">Maharashtra</a>
+</td>
+<td><a href="/wiki/Maharashtra_Cricket_Association_Stadium" title="Maharashtra Cricket Association Stadium">Maharashtra Cricket Association Stadium</a>
+</td>
+<td>2016
+</td>
+<td>2018
+</td>
+<td><a href="/wiki/Sanjiv_Goenka" class="mw-redirect" title="Sanjiv Goenka">Sanjiv Goenka</a>
+</td></tr>
+<tr>
+<td style="background:#ff4500;">
+</td>
+<td><a href="/wiki/Gujarat_Lions" title="Gujarat Lions">Gujarat Lions</a>
+</td>
+<td><a href="/wiki/Rajkot" title="Rajkot">Rajkot</a>, <a href="/wiki/Gujarat" title="Gujarat">Gujarat</a>
+</td>
+<td><a href="/wiki/Saurashtra_Cricket_Association_Stadium" title="Saurashtra Cricket Association Stadium">Saurashtra Cricket Association Stadium</a>
+</td>
+<td>2016
+</td>
+<td>2018
+</td>
+<td><a href="/wiki/Keshav_Bansal" title="Keshav Bansal">Keshav Bansal</a>
+</td></tr></tbody></table>
+</center>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div id="wrapper">
+
+            <div class="middle-box loginscreen text-center loginscreen">
+    <div>
+
+
+            <h3 class="text-center">Login Page</h3>
+            <br>
+
+
+
+        <form class="m-t" role="form" method="POST" action="{% url 'login' %}">
+                {% csrf_token %}
+             
+            <input type="hidden" name="_token" value="H7qqWSGzrQQmqocDOuqDXsAkYph181mC3sfNSWfm">
+            <center>
+            <div class="form-group">
+                <div class="col-md-8">
+                    <input id="username" type="text" class="form-control" placeholder="Email Username" name="username" value="" required="" autofocus="">
+
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-md-8">
+
+                    <input id="password" type="password" class="form-control" placeholder="Password" name="password" required="">  
+                    
+                </div>
+
+            </div>
+
+
+
+            <button type="submit" class="btn btn-danger block full-width m-b">Login</button><br>
+            <br>
+                <a href="{% url 'register' %}"><small>New User?</small></a><br> <br>   
+            <a href="#"><small>Forgot password?</small></a>
+        </form>
+        </center>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% load static %}
+<nav class="navbar navbar-expand-md bg-primary navbar-primary">
+  <a class="navbar-brand" href="#"></a>
+  <img src='{% static "img/G3.jpg" %}' height="8%" width="8%" />
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+    {% if user.is_authenticated %}
+    <li class="nav-item">
+      <a class="nav-link text-white" href="{% url 'profile' user.id %}">Profile</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white" href="{% url 'ParametersView' %}">ParametersView</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link text-white" href="{% url 'logout' %}">Logout</a>
+    </li>
+  </ul>
+  {% else %}
+  <ul class="navbar-nav mr-auto"> 
+    <li class="nav-item">
+      <a class="nav-link text-white" href="{% url 'home' %}">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white" href="{% url 'about' %}">About</a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link text-white" href="{% url 'teams' %}">Teams</a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link text-white" href="{% url 'ParametersView' %}">ParametersView</a>
+    </li>
+  </ul>
+    <ul class="navbar-nav"> 
+      <a class="nav-link text-white" href="{% url 'login' %}">SignIn</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white" href="{% url 'register' %}">SignUp</a>
+    </li>
+  </ul>
+  {% endif %}
+    </div>
+  </div>  
+</nav>

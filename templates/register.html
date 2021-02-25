@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<body>
+	<center>
+		<form class="m-t" role="form" method="POST" enctype="multipart/form-data" action="{% url 'register' %}">
+            {% if messages %}
+    {% for i in messages %}
+    <div class="alert alert-{{ i.tags }}">{{ i }}</div>
+    {% endfor %}
+    {% endif %}
+            {% csrf_token %}
+            
+            <!-- <div class="form-group">
+                <div class="col-md-14" class="form-control">
+                    First Name:{{ form.first_name}}
+
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-md-14">
+                    Last Name:{{ form.last_name}}
+
+                </div>
+
+            </div>
+            
+            <div class="form-group">
+                <div class="col-md-14">
+                    Eamil:{{ form.email}}
+
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-md-14">
+                    Username:{{ form.username }}
+
+                </div>
+
+            </div>
+            
+            <div class="form-group">
+                <div class="col-md-14">
+
+                    Enter Password:{{ form.password1}}
+                    
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-14">
+                    Enter Confirm Password:{{ form.password2}}
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-14">
+                   Enter DOB:{{ pform.dob }}
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-md-14">
+                   Enter File:{{ pform.photo }}
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-md-14">
+                   Please Select Gender:{{ pform.gender }}
+                </div>
+
+            </div>
+
+        -->
+        <br>
+        <h3>Registration Page</h3>
+        <br><div class="form-group">
+                <div class="col-md-8">
+                	
+                    <input  type="text" class="form-control" placeholder="Email your first name" name="firstname"  required="" autofocus="">
+
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-md-8">
+                	
+                    <input  type="text" class="form-control" placeholder="Enter your Last name" name="lastname"  required="" autofocus="">
+
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-md-8">
+                	
+                    <input  type="email" class="form-control" placeholder="Enter your Email" name="email"  required="" autofocus="">
+
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-md-8">
+                	
+                    <input  type="text" class="form-control" placeholder="Email Your Username" name="username"  required="" autofocus="">
+
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-md-8">
+                	
+                    <input  type="password" class="form-control" placeholder="Enter Your Password" name="password"  required="" autofocus="">
+
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-md-8">
+
+                    <input id="password" type="password" class="form-control" placeholder="Enter Your Confirm Password" name="password" required="">  
+                    
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-md-8">
+
+                    <input type="date" class="form-control" placeholder="Enter Your DOB" name="dob" required="">  
+                    
+                </div>
+
+            </div>
+             <div class="form-group">
+                <div class="col-md-8">
+    <label class="form-check-label" for="Gender">Select Your Gender:
+
+    <div class="form-check-inline">
+
+      
+        
+        <br>
+        <input type="radio" class="form-check-input" id="radio1" name="gender" value="Male" checked>Male
+      </label>
+    </div>
+    <div class="form-check-inline">
+      <label class="form-check-label" for="radio2">
+        <input type="radio" class="form-check-input" id="radio2" name="gender" value="Female">Female
+      </label>
+    </div> 
+                    
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-md-8">
+
+                    <input type="file" class="form-control" placeholder="Choose Photo" name="photo" required="">  
+                    
+                </div>
+
+            </div>
+
+
+
+
+            <button type="submit" class="btn btn-danger block m-b">Register</button>
+              <a href="{% url 'login' %}">Login Page</a>
+        </form>
+        </center>
+
+
+</body>
+</html>
+{% endblock %}

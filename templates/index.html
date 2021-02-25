@@ -1,0 +1,56 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<!-- <h3 style="color:#33409A; padding-top:20px;">Predict Winner</h3>
+  <form method="post">
+    {% csrf_token %}
+    <div class="container form-row">
+      <div class="form-group col-md-6 mb-0">
+        {{ form|crispy }}
+      </div>
+      <div class="form-group col-md-6 mb-0">
+      	<img src='{% static "img/0012.png" %}' style="width:500px;height:300px" alt="bat">
+      </div>
+ </div>
+    <input class="btn btn-outline-primary" type="Submit" name="submit" value="Guess"/>
+  </form> -->
+
+<div class="container">
+  <br>
+  
+  <div class="card">
+    <div class="card-header bg-warning"><h3 style="color:#33409A; padding-top:20px;">Predict Winner</h3></div>
+    <div class="card-body">
+      
+      <form method="post">
+    {% csrf_token %}
+    <div class="container form-row">
+      <div class="form-group col-md-6 mb-0">
+        {{ form|crispy }}
+      </div>
+      <!-- <div class="form-group col-md-6 mb-0">
+        <img src='{% static "img/0012.png" %}' style="width:500px;height:300px" alt="bat">
+      </div> -->
+ </div>
+    <input class="btn btn-outline-primary" type="Submit" name="submit" value="Guess"/>
+  </form>
+    </div> 
+    <div class="card-footer">
+      
+
+
+{% if submitbutton == "Guess" %}
+<br>
+<h3> Input: Array {{ inp_arr }}</h3>
+<h1> The Winner is <span style="color:#33409A">{{ output }}</span></h1>
+{% endif %}
+{% endblock %}
+    </div>
+  </div>
+</div>
+
+
+
